@@ -287,5 +287,13 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
 4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
+Project Links
+GitHub Repository: 
+LinkedIn Profile: https://www.linkedin.com/in/vidhan-darji-041a95408
+
 ## Author 
-This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
+Vidhan Darji
+Aspiring Data Analyst & Developer
+Learning SQL, Excel, Power BI, Python (Numpy, Panda) & Data Analytics
+Email: Vidhandarji2005@gmail.com
+Contact No: 6352243436

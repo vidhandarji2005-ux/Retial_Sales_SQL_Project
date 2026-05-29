@@ -26,6 +26,7 @@ FROM
 	RETAIL_SALES
 LIMIT
 	10;
+
 --1. Check Total Records
 
 SELECT
@@ -141,6 +142,7 @@ WHERE
 
 
 -- Q.3 Write a SQL query to calculate the total sales (total_sale) for each category.
+
 SELECT
 	CATEGORY,
 	SUM(TOTAL_SALE) AS TOTAL_SALES,
@@ -168,6 +170,7 @@ FROM
 	RETAIL_SALES
 WHERE
 	TOTAL_SALE >= 1000;
+
 -- Q.6 Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
 
 SELECT category , gender ,COUNT(transaction_id) FROM retail_sales
@@ -207,6 +210,7 @@ LIMIT
 	5;
 
 -- Q.9 Write a SQL query to find the number of unique customers who purchased items from each category.
+
 SELECT
 	CATEGORY,
 	COUNT(DISTINCT CUSTOMER_ID) AS UNIQUE_CUSTOMERS

@@ -185,23 +185,22 @@ SELECT
     COUNT(*) as total_orders    
 FROM hourly_sale
 GROUP BY shift
-
 '''
-11. **Classify each product category as High, Medium, or Low Revenue based on its total sales performance**.
+11.**Classify each product category as High, Medium, or Low Revenue based on its total sales performance**
+
 ```sql
 SELECT
-	CATEGORY,
-	CASE
-		WHEN SUM(TOTAL_SALE) > 50000 THEN 'High Revenue'
-		WHEN SUM(TOTAL_SALE) BETWEEN 20000 AND 50000  THEN 'Medium Revenue'
-		ELSE 'Low Revenue'
-	END AS REVENUE_STATUS
+    CATEGORY,
+    CASE
+        WHEN SUM(TOTAL_SALE) > 50000 THEN 'High Revenue'
+        WHEN SUM(TOTAL_SALE) BETWEEN 20000 AND 50000 THEN 'Medium Revenue'
+        ELSE 'Low Revenue'
+    END AS REVENUE_STATUS
 FROM
-	RETAIL_SALES
+    RETAIL_SALES
 GROUP BY
-	CATEGORY;
+    CATEGORY;
 ```
-
 **Q12. Which customers are VIP customers?**
 ```sql
 SELECT

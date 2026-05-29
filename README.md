@@ -3,16 +3,11 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- ## Project Overview
-
-[Back to Top](#table-of-contents)
-
-...
 - [Objectives](#objectives)
 - [Project Structure](#project-structure)
-  - [Database Setup](#1-database-setup)
-  - [Data Exploration & Cleaning](#2-data-exploration--cleaning)
-  - [Data Analysis & Findings](#3-data-analysis--findings)
+  - [1. Database Setup](#1-database-setup)
+  - [2. Data Exploration & Cleaning](#2-data-exploration--cleaning)
+  - [3. Data Analysis & Findings](#3-data-analysis--findings)
 - [Findings](#findings)
 - [Reports](#reports)
 - [Conclusion](#conclusion)

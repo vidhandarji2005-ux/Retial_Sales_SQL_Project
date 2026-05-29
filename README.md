@@ -4,7 +4,7 @@
 
 **Project Title**: Retail Sales Analysis  
 **Level**: Beginner  
-**Database**: `p1_retail_db`
+**Database**: `RETAIL_SALES_PROJECT`
 
 This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
@@ -19,7 +19,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
+- **Database Creation**: The project starts by creating a database named `RETAIL_SALES_PROJECT`.
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
@@ -185,6 +185,76 @@ SELECT
     COUNT(*) as total_orders    
 FROM hourly_sale
 GROUP BY shift
+
+11. **Classify each product category as High, Medium, or Low Revenue based on its total sales performance**.
+
+SELECT
+	CATEGORY,
+	CASE
+		WHEN SUM(TOTAL_SALE) > 50000 THEN 'High Revenue'
+		WHEN SUM(TOTAL_SALE) BETWEEN 20000 AND 50000  THEN 'Medium Revenue'
+		ELSE 'Low Revenue'
+	END AS REVENUE_STATUS
+FROM
+	RETAIL_SALES
+GROUP BY
+	CATEGORY;
+
+**Q12. Which customers are VIP customers?**
+
+SELECT
+	CUSTOMER_ID,
+	SUM(TOTAL_SALE) AS SPENDING
+FROM
+	RETAIL_SALES
+GROUP BY
+	CUSTOMER_ID
+ORDER BY
+	SPENDING DESC
+LIMIT
+	10;
+
+13.**Which age group spends the most?**
+SELECT
+	CASE
+		WHEN AGE < 20 THEN 'Teen'
+		WHEN AGE BETWEEN 20 AND 40  THEN 'Adult'
+		ELSE 'Senior'
+	END AS AGE_GROUP,
+	SUM(TOTAL_SALE) AS SPENDING
+FROM
+	RETAIL_SALES
+GROUP BY
+	AGE_GROUP
+ORDER BY
+	SPENDING DESC;
+
+14.**Which day has maximum sales?**
+SELECT
+	SALE_DATE,
+	SUM(TOTAL_SALE) AS REVENUE
+FROM
+	RETAIL_SALES
+GROUP BY
+	SALE_DATE
+ORDER BY
+	REVENUE DESC
+LIMIT
+	1;
+
+15.** Repeat Customers**
+
+SELECT
+	CUSTOMER_ID,
+	COUNT(*) AS PURCHASES
+FROM
+	RETAIL_SALES
+GROUP BY
+	CUSTOMER_ID
+HAVING
+	COUNT(*) > 1
+ORDER BY
+	PURCHASES DESC;
 ```
 
 ## Findings
@@ -211,17 +281,5 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
 4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
-## Author - Zero Analyst
-
+## Author 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
-
-### Stay Updated and Join the Community
-
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
-
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
-- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
-
-Thank you for your support, and I look forward to connecting with you!

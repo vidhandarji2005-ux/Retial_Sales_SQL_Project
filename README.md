@@ -186,8 +186,9 @@ SELECT
 FROM hourly_sale
 GROUP BY shift
 
+'''
 11. **Classify each product category as High, Medium, or Low Revenue based on its total sales performance**.
-
+```sql
 SELECT
 	CATEGORY,
 	CASE
@@ -199,9 +200,10 @@ FROM
 	RETAIL_SALES
 GROUP BY
 	CATEGORY;
+```
 
 **Q12. Which customers are VIP customers?**
-
+```sql
 SELECT
 	CUSTOMER_ID,
 	SUM(TOTAL_SALE) AS SPENDING
@@ -213,8 +215,10 @@ ORDER BY
 	SPENDING DESC
 LIMIT
 	10;
+```
 
 13.**Which age group spends the most?**
+```sql
 SELECT
 	CASE
 		WHEN AGE < 20 THEN 'Teen'
@@ -228,8 +232,10 @@ GROUP BY
 	AGE_GROUP
 ORDER BY
 	SPENDING DESC;
+```
 
 14.**Which day has maximum sales?**
+```sql
 SELECT
 	SALE_DATE,
 	SUM(TOTAL_SALE) AS REVENUE
@@ -241,9 +247,10 @@ ORDER BY
 	REVENUE DESC
 LIMIT
 	1;
+```
 
 15.** Repeat Customers**
-
+```sql
 SELECT
 	CUSTOMER_ID,
 	COUNT(*) AS PURCHASES

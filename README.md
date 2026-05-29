@@ -1,5 +1,7 @@
 # Retail Sales Analysis SQL Project
 
+<a name="toc"></a>
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -18,36 +20,34 @@
 ---
 
 ## Project Overview
-<details>
-<summary>Expand</summary>
 
 **Project Title**: Retail Sales Analysis  
 **Level**: Beginner  
 **Database**: RETAIL_SALES_PROJECT
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, cleaning the data, performing exploratory data analysis, and answering business questions using SQL.
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Objectives
-<details>
-<summary>Expand</summary>
 
-- Set up a retail sales database: Create and populate a retail sales database with the provided sales data.  
-- Data Cleaning: Identify and remove any records with missing or null values.  
-- Exploratory Data Analysis (EDA): Perform basic exploratory data analysis to understand the dataset.  
+- Set up a retail sales database: Create and populate a retail sales database with the provided sales data.
+- Data Cleaning: Identify and remove any records with missing or null values.
+- Exploratory Data Analysis (EDA): Perform basic exploratory data analysis to understand the dataset.
 - Business Analysis: Use SQL to answer specific business questions and derive insights from the sales data.
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Project Structure
-<details>
-<summary>Expand</summary>
 
 ### 1. Database Setup
 
 - **Database Creation**: The project starts by creating a database named `RETAIL_SALES_PROJECT`.
-- **Table Creation**: Table `retail_sales` with columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+- **Table Creation**: Table `retail_sales` with columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale.
 
 ```sql
 CREATE DATABASE RETAIL_SALES_PROJECT;
@@ -69,19 +69,19 @@ CREATE TABLE retail_sales (
 
 ### 2. Data Exploration & Cleaning
 
-- **Record Count**:  
+- **Record Count:**  
   ```sql
   SELECT COUNT(*) FROM retail_sales;
   ```
-- **Customer Count**:  
+- **Customer Count:**  
   ```sql
   SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
   ```
-- **Category Count**:  
+- **Category Count:**  
   ```sql
   SELECT DISTINCT category FROM retail_sales;
   ```
-- **Null Value Check & Removal**:
+- **Null Value Check & Removal:**
   ```sql
   SELECT * FROM retail_sales
   WHERE sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL
@@ -228,61 +228,65 @@ CREATE TABLE retail_sales (
   ORDER BY PURCHASES DESC;
   ```
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Findings
-<details>
-<summary>Expand</summary>
 
 - **Customer Demographics:** The dataset includes customers from various age groups, with sales distributed across different categories.
 - **High-Value Transactions:** Several transactions had a total sale amount greater than 1000, indicating premium purchases.
 - **Sales Trends:** Monthly analysis shows variations in sales, helping identify peak seasons.
 - **Customer Insights:** The analysis identifies the top-spending customers and the most popular product categories.
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Reports
-<details>
-<summary>Expand</summary>
 
 - **Sales Summary:** A detailed report summarizing total sales, customer demographics, and category performance.
 - **Trend Analysis:** Insights into sales trends across different months and shifts.
 - **Customer Insights:** Reports on top customers and unique customer counts per category.
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Conclusion
-<details>
-<summary>Expand</summary>
 
-This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
+This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this analysis can help guide business decision-making and provide a foundation for more advanced analytics work.
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## How to Use
-<details>
-<summary>Expand</summary>
 
-- **Clone the Repository**: Clone this project repository from GitHub.
-- **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
-- **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
-- **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
+- **Clone the Repository:** Clone this project repository from GitHub.
+- **Set Up the Database:** Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
+- **Run the Queries:** Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
+- **Explore and Modify:** Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Project Links
-<details>
-<summary>Expand</summary>
 
 - [GitHub Repository](https://github.com/vidhandarji2005-ux/Retial_Sales_SQL_Project)
 - [LinkedIn Profile](https://www.linkedin.com/in/vidhan-darji-041a95408)
 
-</details>
+[Back to Top](#toc)
+
+---
 
 ## Author
 
 **Vidhan Darji**  
 Aspiring Data Analyst & Developer  
-Learning SQL, Excel, Power BI, Python (Numpy, Panda) & Data Analytics   
+Learning SQL, Excel, Power BI, Python (Numpy, Panda) & Data Analytics  
 📧 Email: Vidhandarji2005@gmail.com  
 📞 Contact No: 6352243436
+
+[Back to Top](#toc)
